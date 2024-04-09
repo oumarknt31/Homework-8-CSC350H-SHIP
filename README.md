@@ -1,35 +1,25 @@
-# Fish Collector Game
+# Introduction
+Welcome to the README documentation for the Ship-Fish Unity game. This document will provide an overview of the game mechanics, controls, and implementation details.
 
-Welcome to Fish Collector, a simple game where you command a ship to collect fish placed in the scene. In this game, you'll use the right mouse button to place fish and the left mouse button to command the ship to collect them. The objective is to collect all the fish in the game.
+# Game Description
+Ship-Fish is a 2D game where you control a ship that collects various types of fishes in the ocean. Fishes can be of different types - regular, burning, or exploding. The player can spawn fishes randomly by right-clicking, and the ship can collect the fishes by left-clicking on them.
 
-# How to Play
+# Objective
+The objective of the game is to collect as many fishes as possible before the game ends. Be careful with the exploding fishes, as they can cause damage to your ship!
 
-# Fish Placement
-Use the right mouse button to place fish in the water.
-Each fish appears as a small square in the location you click.
+# Controls
+Right Click: Spawn a random fish (regular, burning, or exploding).
+Left Click: Command the ship to collect fishes.
+Gameplay Mechanics
+The game has two distinct phases of gameplay mechanics:
 
-# Ship Movement and Collection
-Click on the ship with the left mouse button to activate it.
-The ship will collect fish in the order they were placed, moving directly to each fish's location.
-After collecting a fish, the ship immediately moves towards the next fish in sequence until all placed fish are collected.
-If additional fish are placed after the ship finishes collecting, click the ship again to start collecting new ones.
-The ship collects fish from oldest to newest or nearest, based on their placement time.
+# Part 1: Ship Goes to Oldest Fish
+In this part, the ship prioritizes collecting the oldest fish first, based on their spawn time.
+The ship navigates through the ocean to reach the oldest fish and collects it before moving on to the next oldest fish.
+# Part 2: Ship Goes to Nearest Fish
+In this part, the ship prioritizes collecting the nearest fish.
+The ship calculates the distance to each fish and moves towards the nearest one for collection.
 
-# Polymorphism and Inheritance
-This game focuses on the design and implementation of inheritance and polymorphism.
-
-# Inheritance
-Inheritance allows the creation of subclasses that inherit attributes and methods from a superclass. In this game, the Fish class serves as the superclass, and there are subclasses for different types of fish (regular, burning, exploding).
-
-# Polymorphism
-Polymorphism enables objects of different types to be treated as objects of a common superclass.
-
-Run-time Polymorphism (Dynamic Polymorphism): Achieved through the destroyFish method overriding. Each subclass of Fish overrides the destroyFish method to provide its own implementation. When a fish is destroyed, the appropriate overridden method is called based on the type of fish. This allows for different behaviors (such as animations for burning and exploding fish) while using a common interface.
-
-# Additional Notes
--Fish are represented as squares in the game.
-
--Provided animations for burning and exploding fish have been integrated into the destruction process.
 
 # Youtube
  Ship goes to the oldest fish -> https://youtu.be/3IsB1NpA9Q8
